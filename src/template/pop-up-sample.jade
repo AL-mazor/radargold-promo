@@ -1,0 +1,16 @@
+.pop-up.pop-up-sample
+	.pop-up--book
+		img(src="img/pop-up-book.png", alt="")
+	.pop-up--inner
+		p.pop-up--title Узнай, как зарабатывать без риска. 
+		p.pop-up--subtitle Книга «5 признаков высконадёжногtо проекта». Для подписчиков Radargold – книга в подарок.
+		form.pop-up--form(action="send.php", method="POST")
+			.input-field
+				input(name="name", type="text", placeholder="Введи свое имя")
+				span.input-field--check.input-field--check-ok
+			.input-field.input-field-validation
+				input(name="email", type="email", placeholder="Введи свой e-mail адрес")
+				span.input-field--check.input-field--check-error
+					//
+						include ../img/check-error.svg
+			button(type="submit").btn.btn-sm.btn-green.btn-submit.btn-high Получить

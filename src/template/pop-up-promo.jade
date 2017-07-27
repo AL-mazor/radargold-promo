@@ -1,0 +1,22 @@
+.pop-up.pop-up-promo.pop-up-text
+	.pop-up--inner
+		.mini-logo
+		p.pop-up--title Получи промо-код на 100% рефбек своих инвестиций!
+		div.pop-up--subtitle 
+			p 
+				|Отправь заявку сейчас, и в течение 2-х часов получи приглашение с индивидуальным промо-кодом для регистрации на сайте-мониторинге 
+				a(href="https://www.radargold.com/") www.radargold.com.
+			p 
+				|Все пользователи, зарегистрированные с помощью промо-кода, гарантированно получают 
+				span.highlight 100% 
+				|рефбек собственных инвестиций!
+		form.pop-up--form(action="send.php", method="POST")
+			.input-field
+				input(name="name", type="text", placeholder="Введи свое имя")
+				span.input-field--check.input-field--check-ok
+			.input-field.input-field-validation
+				input(name="email", type="email", placeholder="Введи свой e-mail адрес")
+				span.input-field--check.input-field--check-error
+					//
+						include ../img/check-error.svg
+			button(type="submit").btn.btn-lg.btn-green.btn-submit.btn-high Получить промо-код

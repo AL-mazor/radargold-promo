@@ -1,0 +1,24 @@
+// Colors
+$wh: #fff;
+$bl: #000;
+$red: #ff0000;
+$green: #009197;
+$blue: #0f669e;
+
+// Media queries
+$lg-desk: '(max-width: 1630px)';
+$sm-desk: '(max-width: 1199px)';
+@mixin resp-to($media) {
+	@media only screen and #{$media} {
+		@content;
+	}
+}
+
+// Grid
+.row {
+	&:after {
+		content: '';
+		display: table;
+		clear: both;
+	}
+}

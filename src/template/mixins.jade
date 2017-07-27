@@ -1,0 +1,41 @@
+//- Platform
+mixin platform(platform)
+	a(target="_blank", href="#{platform.linkRadar}").platform
+		.platform--name= platform.name
+		//-
+			.platform--link= platform.link
+		.platform--logo(style="background-image: url(img/#{platform.img});")
+		.platform--info.info
+			.info--item
+				.info--name Вклад
+				.info--text= platform.investment
+			.info--item
+				.info--name Период вклада
+				.info--text= platform.term
+			.info--item
+				.info--name Проценты
+				.info--text= platform.percent
+		.stat-block.stat-block-highlight
+			.stat
+				.stat--title Вложений от партнеров в месяц
+				.stat--amount= platform.investByPartners
+			.stat
+				.stat--title Сумма выплат за месяц
+				.stat--amount= platform.sumOfReturn
+		.stat-block
+			.stat
+				.stat--title Сумма нашего вклада
+				.stat--amount= platform.sumOfInvest
+			.stat--visual: span
+			.stat
+				.stat--title Получено $
+				.stat--amount= platform.returned
+		.platform--rating
+			.sign.sign-pay Платит
+			.sign.sign-best Лучшая
+
+//- Advantage
+mixin adv(img, text)
+	li.advantages--item
+		.advantages--img(style="background-image: url(img/#{img});")
+		span.advantages--desc= text

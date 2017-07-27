@@ -1,0 +1,20 @@
+.pop-up.pop-up-subscribe.pop-up-text
+	.pop-up--inner
+		.mini-logo
+		p.pop-up--title Последние новости и обновления инвестиционных площадок! 
+		div.pop-up--subtitle 
+			p Держи руку на пульсе:
+			ul.pop-up--list
+				li Новые проверенные хайпы
+				li Изменения в работе существующих площадок
+				li Еженедельный обновляемый «Черный список» 
+		form.pop-up--form(action="send.php", method="POST")
+			.input-field
+				input(name="name", type="text", placeholder="Введи свое имя")
+				span.input-field--check.input-field--check-ok
+			.input-field.input-field-validation
+				input(name="email", type="email", placeholder="Введи свой e-mail адрес")
+				span.input-field--check.input-field--check-error
+					//
+						include ../img/check-error.svg
+			button(type="submit").btn.btn-sm.btn-green.btn-submit.btn-high Подписаться

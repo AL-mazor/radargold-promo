@@ -1,0 +1,21 @@
+{
+  "name": "redmax",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Rostislav Svidelskyi"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize-scss": "normalize.scss#^7.0.0"
+  }
+}
