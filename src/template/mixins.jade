@@ -1,6 +1,6 @@
 //- Platform
 mixin platform(platform)
-	a(target="_blank", href="#{platform.linkRadar}").platform
+	a(target="_blank", href="#{platform.linkRadar}").platform.wow.fadeInUp(data-wow-delay="#{platform.anim}")
 		.platform--name= platform.name
 		//-
 			.platform--link= platform.link
@@ -37,5 +37,18 @@ mixin platform(platform)
 //- Advantage
 mixin adv(img, text)
 	li.advantages--item
+		.advantages--img(style="background-image: url(img/#{img});")
+		span.advantages--desc= text
+
+mixin adv1(img, text)
+	li.advantages--item.wow.fadeInUp(data-wow-delay="0.1s")
+		.advantages--img(style="background-image: url(img/#{img});")
+		span.advantages--desc= text
+mixin adv2(img, text)
+	li.advantages--item.wow.fadeInUp(data-wow-delay="0.2s")
+		.advantages--img(style="background-image: url(img/#{img});")
+		span.advantages--desc= text
+mixin adv3(img, text)
+	li.advantages--item.wow.fadeInUp(data-wow-delay="0.3s")
 		.advantages--img(style="background-image: url(img/#{img});")
 		span.advantages--desc= text

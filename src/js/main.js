@@ -203,3 +203,12 @@ $(function() {
 	}
 
 });
+
+if (window.innerWidth >= 991) {
+	$(function () {
+	new WOW({
+	  offset:       200,          
+	  mobile:       true      
+	}).init();
+	});
+};

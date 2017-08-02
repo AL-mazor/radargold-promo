@@ -7,6 +7,7 @@ html
 		link(rel="icon", href="img/favicon.png" type="image/x-icon")
 
 		link(rel="stylesheet", href="style.css")
+		link(rel="stylesheet", href="animate.css")
 		title Мониторинг и обзор хайп проектов 2017 года - лучшие новые и надежные хайпы, которые платят!
 	body
 		include template/mixins
@@ -22,14 +23,14 @@ html
 				.gradient
 				.container
 					.page-overlay--inner
-						.page-overlay--device
+						.page-overlay--device.wow.fadeInLeft
 						.page-overlay--verified
-						.page-overlay--content
+						.page-overlay--content.wow.fadeInLeft(data-wow-delay="0.2s")
 							span.page-overlay--title Проверь своих партнеров
 							span.page-overlay--subtitle Получи бесплатный мониторинг безопасности самых популярных интернет-проектов.
 								span *
 							.btn.btn-lg.btn-white.btn-high.btn-popup-subscribe Подписаться на мониторинг
-						.invest-form
+						.invest-form.wow.fadeIn(data-wow-delay="0.7s")
 							.invest-form--logo.mini-logo
 							.invest-form--header
 								p.invest-form--text-proofed.highlight 100% проверенные 
@@ -51,37 +52,37 @@ html
 										.stat--amount $ 394 070
 							.invest-form--footer
 								.btn.btn-sm.btn-low.btn-green.btn-popup.btn-popup-subscribe Подпишись
-				.logo-bg
+				.logo-bg.wow.rotateIn
 						
 			
 			// About Us
 			section.about-us
 				.container
-					.about-us--inner
+					.about-us--inner.wow.fadeInLeft
 						h2.about-us--title Независимый рейтинг инвестиционных платформ
 						p.about-us--text Рейтинг доверия инвестиций формируется на базе 75 показателей и личном опыте вложений в проект. Подписчикам Radargold рейтинг предоставляется бесплатно.
 						ul.advantages
-							+adv('advantage-1.png', 'Постояннное обновление базы')
-							+adv('advantage-2.png', 'Проверяем площадки на своих деньгах')
-							+adv('advantage-3.png', 'Предоставляем рейтинг бесплатно')
+							+adv1('advantage-1.png', 'Постояннное обновление базы')
+							+adv2('advantage-2.png', 'Проверяем площадки на своих деньгах')
+							+adv3('advantage-3.png', 'Предоставляем рейтинг бесплатно')
 						//- 
 							.btn-row
 								.btn.btn-sm.btn-green.btn-high.btn-popup-subscribe Детальный анализ
 								.simple-btn.btn-popup-promo интересно?
-						p.about-us--text Хочешь быть в курсе последних изменений на рынке хайпов? Подпишись сейчас!
-						.btn.btn-sm.btn-green.btn-high.btn-popup-subscribe Узнать подробнее
+						p.about-us--text.wow.fadeIn(data-wow-delay="0.5s") Хочешь быть в курсе последних изменений на рынке хайпов? Подпишись сейчас!
+						.btn.btn-sm.btn-green.btn-high.btn-popup-subscribe.wow.fadeIn(data-wow-delay="0.5s") Узнать подробнее
 
-					.about-us--device.about-us--device-1
+					.about-us--device.about-us--device-1.wow.fadeInDown
 						//img(src="img/devices-tv.png", alt="")
-					.about-us--device.about-us--device-2
+					.about-us--device.about-us--device-2.wow.fadeIn
 						//img(src="img/devices-phone.png", alt="")
-				.logo-bg
+				.logo-bg.wow.rotateIn
 			
 			section.rating
 				.container
 					.rating--heading
-							h2.rating--title Топ площадки месяца 
-							p.block--text Безопасные проекты с высокой доходностью и гарантированным выводом средств.
+							h2.rating--title.wow.fadeIn Топ площадки месяца 
+							p.block--text.wow.fadeIn(data-wow-delay="0.2s") Безопасные проекты с высокой доходностью и гарантированным выводом средств.
 				.platform-row.hoverscroll
 					//.swiper-container
 					//.swiper-wrapper
@@ -94,31 +95,31 @@ html
 						platform('logo-robinhood-global.png')
 						platform('logo-amaya-finance.png')
 						platform('logo-dron-logistics.png')
-				.logo-bg
+				.logo-bg.wow.rotateIn
 
 				.container
 					.block.block-lg.block-center
-						a(target="_blank", href="https://www.radargold.com/catalog").btn.btn-green.btn-lg.btn-high Показать все
-						p.block--text Более 2000 частных инвесторов подписаны на реуглярный мониторинг Radargold
+						a(target="_blank", href="https://www.radargold.com/catalog").btn.btn-green.btn-lg.btn-high.wow.fadeIn Показать все
+						p.block--text.wow.fadeIn Более 2000 частных инвесторов подписаны на реуглярный мониторинг Radargold
 			
 			section.cta
 				.gradient
 				.container
 					.block-center.cta--block
-						p.cta--title Хочешь быть уверенным в своих инвестиционных партнёрах?
+						p.cta--title.wow.fadeIn Хочешь быть уверенным в своих инвестиционных партнёрах?
 						.cta--inner
-							p.block--text Получи бесплатную консультацию эксперта по безопасности интернет-проектов.
+							p.block--text.wow.fadeIn Получи бесплатную консультацию эксперта по безопасности интернет-проектов.
 							form.cta-form(action="send.php", method="POST")
-								.input-field
+								.input-field.wow.fadeIn
 									input(name="name", type="text", placeholder="Введи свое имя")
 									span.input-field--check.input-field--check-ok
-								.input-field.input-field-validation
+								.input-field.input-field-validation.wow.fadeIn
 									input(name="email", type="email", placeholder="Введи свой e-mail адрес")
 									span.input-field--check.input-field--check-error
 										//
 											include img/check-error.svg
-								p.form-text Мы принципиально не сотрудничаем с третьим сторонами и не передаем личные данные клиентов.
-								input(type="submit", value="Получить консультацию").btn.btn-submit.btn-green.btn-lg.btn-high
+								p.form-text.wow.fadeIn Мы принципиально не сотрудничаем с третьим сторонами и не передаем личные данные клиентов.
+								input(type="submit", value="Получить консультацию").btn.btn-submit.btn-green.btn-lg.btn-high.wow.fadeIn(data-wow-offset="100")
 			.pop-up-overlay
 				.pop-up--close
 			//- include template/pop-up-sample
@@ -141,6 +142,7 @@ html
 		script(type="text/javascript", src="js/swiper.jquery.min.js")
 		script(type="text/javascript", src="js/jquery.validate.min.js")
 		script(type="text/javascript", src="js/main.js")
+		script(type="text/javascript", src="js/wow.min.js")
 		include google-analytics.js
 		include yandex-metrika.js
 
